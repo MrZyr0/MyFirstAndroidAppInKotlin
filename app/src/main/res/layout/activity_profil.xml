@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_mood_black_24dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePicture"
+            android:layout_marginTop="30sp"
+            android:layout_marginStart="30sp"
+            android:textSize="30sp"
+            android:text="firstName"
+            android:textColor="@android:color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/firstName"
+            app:layout_constraintTop_toBottomOf="@+id/profilePicture"
+            android:layout_marginTop="30sp"
+            android:layout_marginStart="5sp"
+            android:textSize="30sp"
+            android:text="lastName"
+            android:textColor="@android:color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstName"
+            android:layout_marginTop="5sp"
+            android:layout_marginStart="50sp"
+            android:textSize="20sp"
+            android:text="username"
+            android:textColor="@android:color/darker_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="30sp"
+            android:textSize="20sp"
+            android:text="john.doe@domain.com"
+            android:textColor="@android:color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="30sp"
+            android:textSize="20sp"
+            android:text="+33 7 40 19 35 93"
+            android:textColor="@android:color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            android:layout_marginTop="50sp"
+            android:layout_marginStart="30sp"
+            android:textSize="20sp"
+            android:text="120 Anonymous avenue, 12345 city"
+            android:textColor="@android:color/black"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_sendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="5sp"
+                android:src="@drawable/ic_email_black_24dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/btn_sendEmail"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="5sp"
+                android:src="@drawable/ic_local_phone_black_24dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/btn_call"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="5sp"
+                android:src="@drawable/ic_navigation_black_24dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
