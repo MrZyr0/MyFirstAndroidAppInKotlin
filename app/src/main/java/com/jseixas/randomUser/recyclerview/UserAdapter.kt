@@ -22,7 +22,6 @@ class UserAdapter(private val myDataset: MutableList<Results>)  : RecyclerView.A
     var gson = Gson()
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // Setup element to update on itemView by ID
         val _firstName = itemView.item_user_firstName
         val _lastName = itemView.item_user_lastName
         val _username = itemView.item_user_username

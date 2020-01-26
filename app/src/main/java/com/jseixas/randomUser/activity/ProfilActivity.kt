@@ -26,10 +26,11 @@ class ProfilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
 
+        // Get data from RecyclerView
         val userData = gson.fromJson(intent.getStringExtra("UserData"), Results::class.java)
 
-        Log.d("DATA", userData.toString())
 
+        // Setup informations
         Picasso.get()
             .load(userData.picture.thumbnail)
             .placeholder(R.drawable.ic_mood_black_24dp)
@@ -47,7 +48,7 @@ class ProfilActivity : AppCompatActivity() {
         }
         findViewById<AppCompatImageButton>(R.id.btn_call).setOnClickListener{
             call(userData.phone)
-            Toast.makeText(this, "Attention this number is only for testing ! \n Do not call this number", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Warning this number is only for testing ! \n Do not call this number", Toast.LENGTH_LONG).show()
         }
         findViewById<AppCompatImageButton>(R.id.btn_navigation).setOnClickListener{
             navigate(userData.location.coordinates.latitude, userData.location.coordinates.longitude)
@@ -63,12 +64,9 @@ class ProfilActivity : AppCompatActivity() {
 
 
         try {
-            //start email intent
             startActivity(Intent.createChooser(intent, "Choose Email Client..."))
         }
         catch (e: Exception){
-            //if any thing goes wrong for example no email client application or any exception
-            //get and show exception message
             Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         }
     }
@@ -80,12 +78,9 @@ class ProfilActivity : AppCompatActivity() {
 
 
         try {
-            //start email intent
             startActivity(Intent.createChooser(intent, "Choose a dialer..."))
         }
         catch (e: Exception){
-            //if any thing goes wrong for example no email client application or any exception
-            //get and show exception message
             Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         }
     }
@@ -96,12 +91,9 @@ class ProfilActivity : AppCompatActivity() {
         )
 
         try {
-            //start email intent
             startActivity(Intent.createChooser(intent, "Choose navigation app..."))
         }
         catch (e: Exception){
-            //if any thing goes wrong for example no email client application or any exception
-            //get and show exception message
             Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         }
     }
